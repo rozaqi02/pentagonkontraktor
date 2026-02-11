@@ -1,5 +1,4 @@
-import React, { useMemo, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import React, { useMemo } from "react";
 import { RiArrowRightUpLine, RiFileDownloadLine, RiShieldCheckLine } from "react-icons/ri";
 
 import SEO from "../components/SEO";
@@ -17,8 +16,6 @@ import { company, services, processSteps, faq } from "../data/siteData";
 import { projects } from "../data/projects";
 
 export default function Home() {
-  const reduce = useReducedMotion();
-
   const waHref = useMemo(() => {
     const msg = encodeURIComponent(
       "Halo, saya ingin konsultasi proyek dengan CV. Pentagon Konstruksindo. Lokasi: ... Jenis bangunan: ... Perkiraan luas: ..."
@@ -37,13 +34,6 @@ export default function Home() {
     []
   );
 
-  const heroAnim = reduce
-    ? {}
-    : {
-        initial: { opacity: 0, y: 14 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
-      };
 
   return (
     <>
@@ -64,7 +54,7 @@ export default function Home() {
 
         <Container className="py-16 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-12">
-            <motion.div className="lg:col-span-7" {...heroAnim}>
+            <Reveal className="lg:col-span-7" delay={0}>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur">
                 <RiShieldCheckLine className="text-base" />
                 {company.brandLine}
@@ -111,7 +101,7 @@ export default function Home() {
                 <span className="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">Renovasi</span>
                 <span className="rounded-full bg-white/10 px-3 py-1 ring-1 ring-white/10">Interior</span>
               </div>
-            </motion.div>
+            </Reveal>
 
             <div className="lg:col-span-5">
               <div className="rounded-3xl bg-white/10 p-6 text-white ring-1 ring-white/15 backdrop-blur">

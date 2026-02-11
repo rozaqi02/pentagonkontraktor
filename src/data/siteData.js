@@ -8,8 +8,8 @@ export const company = {
   email: "cvpentagonkonstruksindo@gmail.com",
 
   phones: [
-    { label: "WhatsApp", display: "0851-9009-2266", number: "625190092266" },
-    { label: "WhatsApp", display: "0851-9160-0107", number: "625191600107" }
+    { label: "WhatsApp", display: "0851-9009-2266", number: "+62851-9009-2266" },
+    { label: "WhatsApp", display: "0851-9160-0107", number: "+62851-9160-0107" }
   ],
 
   address: {
@@ -21,7 +21,7 @@ export const company = {
   mapEmbedUrl:
     "https://www.google.com/maps?q=Jl.%20Simpang%20Ranugrati%20Selatan%203B%20No.%2022%2C%20Sawojajar%2C%20Kedungkandang%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065139&output=embed",
 
-  primaryWhatsapp: "625190092266",
+  primaryWhatsapp: "+62851-9009-2266",
 
   businessHours: [
     { days: "Senin – Sabtu", hours: "08.00 – 17.00" },

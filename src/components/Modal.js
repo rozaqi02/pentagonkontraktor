@@ -33,9 +33,9 @@ export default function Modal({ open, onClose, title, children, maxWidth = "max-
         if (e.target === e.currentTarget) onClose?.();
       }}
     >
-      <div className="absolute inset-0 bg-ink-900/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-ink-900/60 md:backdrop-blur-sm modal-backdrop" />
 
-      <div className={`relative w-full ${maxWidth} overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-ink-900/10`}>
+      <div className={`modal-panel relative w-full ${maxWidth} overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-ink-900/10`}>
         <div className="flex items-center justify-between border-b border-ink-900/5 px-5 py-4">
           <div className="text-sm font-extrabold text-ink-900">{title}</div>
           <button
