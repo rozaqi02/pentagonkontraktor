@@ -79,12 +79,12 @@ export default function About() {
             <div className="lg:col-span-5">
               <Reveal>
                 <div className="rounded-3xl bg-white p-7 shadow-soft ring-1 ring-ink-900/5">
-                  <div className="text-xs font-bold text-ink-500">VISION</div>
+                  <div className="text-xs font-bold text-ink-500">VISI</div>
                   <div className="mt-2 text-lg font-extrabold text-ink-900">
                     {company.vision}
                   </div>
 
-                  <div className="mt-7 text-xs font-bold text-ink-500">MISSION</div>
+                  <div className="mt-7 text-xs font-bold text-ink-500">MISI</div>
                   <ul className="mt-3 space-y-2 text-sm text-ink-700">
                     {company.missions.map((m) => (
                       <li key={m} className="flex items-start gap-2">
