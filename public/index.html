@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1220" />
+
+    <meta
+      name="description"
+      content="CV. Pentagon Konstruksindo — jasa arsitektur & konstruksi (desain, perencanaan teknis, pelaksanaan). Hunian, komersial, dan perkantoran."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CV. Pentagon Konstruksindo" />
+    <meta
+      property="og:description"
+      content="Dari Desain ke Realita, Kami Hadir untuk Anda! — Jasa arsitektur & konstruksi untuk hunian, usaha, dan perkantoran."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/assets/og.jpg" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="robots" href="%PUBLIC_URL%/robots.txt" />
+    <link rel="sitemap" type="application/xml" href="%PUBLIC_URL%/sitemap.xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>CV. Pentagon Konstruksindo</title>
+  </head>
+  <body>
+    <noscript>Anda perlu mengaktifkan JavaScript untuk menjalankan website ini.</noscript>
+
+    <div id="root"></div>
+
+    <!--
+      Netlify Forms (SPA):
+      Netlify needs the form markup available at build-time. This hidden form helps Netlify detect it.
+    -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="location" />
+      <input type="text" name="service" />
+      <input type="text" name="size" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
