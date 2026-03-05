@@ -62,7 +62,8 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink-900/40 via-ink-900/80 to-ink-900" />
 
         <Container>
-          <div className="grid items-center gap-16 lg:grid-cols-12 lg:gap-8">
+          {/* Perbaikan: Mengurangi gap pada mobile (gap-10) */}
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
             <Reveal className="lg:col-span-7" delay={0}>
               <div className="inline-flex items-center gap-3 rounded-full bg-white/5 pr-4 pl-2 py-1.5 text-xs font-semibold text-brand ring-1 ring-white/10 backdrop-blur-md">
                 <span className="relative flex h-3 w-3 items-center justify-center">
@@ -72,7 +73,7 @@ export default function Home() {
                 <span className="text-white/90 tracking-wide uppercase">General Contractor & Architecture</span>
               </div>
 
-              <h1 className="mt-8 text-balance text-5xl font-extrabold tracking-tight text-white sm:text-7xl sm:leading-[1.15]">
+              <h1 className="mt-8 text-balance text-4xl font-extrabold tracking-tight text-white sm:text-7xl sm:leading-[1.15]">
                 <span className="bg-gradient-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent">
                   Dari Desain ke Realita, Kami Hadir untuk Anda.
                 </span>
@@ -99,11 +100,19 @@ export default function Home() {
                   Hubungi Representatif
                 </Button>
               </div>
+
+              <div className="mt-12 flex flex-wrap gap-3 text-sm font-medium text-white/60">
+                {['Arsitektur', 'Konstruksi Sipil', 'Interior', 'Renovasi'].map(tag => (
+                  <span key={tag} className="flex items-center gap-1.5 rounded-full bg-white/5 px-4 py-2 ring-1 ring-white/10 backdrop-blur-sm cursor-default transition-colors hover:text-brand">
+                    <RiBuilding4Line className="opacity-70" /> {tag}
+                  </span>
+                ))}
+              </div>
             </Reveal>
 
-            {/* Glassmorphism Contact Card */}
-            <Reveal className="lg:col-span-5" delay={0.2}>
-              <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-2xl transition-transform duration-700 hover:-translate-y-2">
+            {/* Glassmorphism Contact Card - Perbaikan: Padding responsif p-6 sm:p-8 */}
+            <Reveal className="lg:col-span-5 w-full" delay={0.2}>
+              <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-6 sm:p-8 shadow-2xl backdrop-blur-2xl transition-transform duration-700 hover:-translate-y-2">
                 <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand/10 blur-[60px] transition-all duration-700 group-hover:bg-brand/20 group-hover:scale-125" />
                 
                 <div className="relative z-10">
@@ -116,13 +125,14 @@ export default function Home() {
                   <p className="mt-2 text-sm text-white/60 leading-relaxed font-light">Diskusikan spesifikasi teknis dan kebutuhan ruang Anda bersama representatif kami.</p>
                   
                   <div className="mt-8 space-y-5 text-sm text-white/90">
-                    <div className="flex items-center gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/5 transition-colors hover:bg-white/10">
+                    {/* Perbaikan: Padding inner row p-3 sm:p-4 */}
+                    <div className="flex items-center gap-4 rounded-2xl bg-white/5 p-3 sm:p-4 ring-1 ring-white/5 transition-colors hover:bg-white/10">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/20 text-brand">
                         <RiWhatsappLine className="text-2xl" />
                       </div>
-                      <div>
-                        <div className="text-xs text-white/50 mb-0.5 uppercase tracking-wider font-semibold">Hotline & WhatsApp</div>
-                        <div className="font-semibold text-base">{company.phones[0].display}</div>
+                      <div className="min-w-0">
+                        <div className="text-[10px] text-white/50 mb-0.5 uppercase tracking-wider font-semibold">Hotline & WhatsApp</div>
+                        <div className="font-semibold text-sm sm:text-base">{company.phones[0].display}</div>
                       </div>
                     </div>
                     
@@ -130,9 +140,10 @@ export default function Home() {
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/5 text-brand ring-1 ring-white/10">
                         <RiMailLine className="text-xl" />
                       </div>
-                      <div>
-                        <div className="text-xs text-white/50 mb-0.5 uppercase tracking-wider font-semibold">Surat Elektronik</div>
-                        <div className="font-medium">{company.email}</div>
+                      {/* Perbaikan: break-all untuk email agar tidak memotong kartu */}
+                      <div className="min-w-0">
+                        <div className="text-[10px] text-white/50 mb-0.5 uppercase tracking-wider font-semibold">Surat Elektronik</div>
+                        <div className="font-medium break-all text-xs sm:text-sm">{company.email}</div>
                       </div>
                     </div>
                   </div>
@@ -143,7 +154,7 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* --- STATS SECTION --- */}
+      {/* --- Bagian lain tetap sama --- */}
       <section className="relative z-20 -mt-24 mb-16 px-4">
         <Container>
           <div className="rounded-[2.5rem] bg-white/95 p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] ring-1 ring-ink-900/5 backdrop-blur-xl sm:p-12">
@@ -152,7 +163,7 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* --- VISI & MISI SECTION (Sesuai PDF) --- */}
+      {/* --- VISI & MISI SECTION --- */}
       <section className="bg-ink-900 py-20 sm:py-32 relative overflow-hidden text-white">
         <div className="absolute top-0 left-1/2 -z-10 h-full w-full -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,rgba(249,136,20,0.15),transparent_50%)]" />
         <Container>
@@ -174,7 +185,6 @@ export default function Home() {
                 <div className="relative z-10">
                   <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-widest border-b border-white/20 pb-4 inline-block">Visi</h3>
                   <p className="text-xl leading-relaxed text-white/95 font-medium">
-                    {/* Teknik pemisahan string agar tidak merusak kode oleh auto-citer */}
                     {"Menjadi perusahaan arsitektur dan konstruksi terpercaya yang " + 
                      "memberikan solusi terbaik dan berkelanjutan dalam " + 
                      "pembangunan hunian, ruang usaha, dan perkantoran di Indonesia."}
