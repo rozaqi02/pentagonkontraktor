@@ -9,7 +9,6 @@ export const company = {
 
   phones: [
     { label: "WhatsApp", display: "0851-9009-2266", number: "+62851-9009-2266" },
-    { label: "WhatsApp", display: "0851-9160-0107", number: "+62851-9160-0107" }
   ],
 
   address: {
