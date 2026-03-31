@@ -20,7 +20,7 @@ import Stats from "../components/Stats";
 import Accordion from "../components/Accordion";
 import ProjectCard from "../components/ProjectCard";
 
-import hero from "../assets/images/hero.jpg";
+import hero from "../assets/images/home-hero.jpeg";
 import { company, services, processSteps, faq } from "../data/siteData";
 import { projects } from "../data/projects";
 
@@ -55,8 +55,8 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-ink-900 pb-36 pt-20 sm:pb-48 sm:pt-28">
         <img
           src={hero}
-          alt="Latar Belakang Proyek CV Pentagon"
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25 mix-blend-luminosity scale-105 animate-[pulse_15s_ease-in-out_infinite]"
+          alt="Aktivitas lapangan CV. Pentagon Konstruksindo"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_42%] lg:object-[center_58%] opacity-50"
         />
         <div className="absolute top-[-10%] left-[-10%] -z-10 h-[600px] w-[600px] rounded-full bg-brand/30 opacity-40 blur-[100px] mix-blend-screen" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink-900/40 via-ink-900/80 to-ink-900" />
