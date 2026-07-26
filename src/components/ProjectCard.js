@@ -13,21 +13,21 @@ export default function ProjectCard({ project }) {
   return (
     <Link
       to={`/projects/${project.slug}`}
-      className="group focus-ring overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-ink-900/5 transition hover:-translate-y-[2px] hover:shadow-glow"
+      className="group focus-ring overflow-hidden rounded-[6px] bg-white border border-ink-200/60 shadow-sm transition-all duration-300 hover:-translate-y-[2px] hover:shadow-md"
     >
       <div className="relative aspect-[16/9] overflow-hidden">
         <img
           src={project.cover}
           alt={project.title}
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+          className="h-full w-full object-cover transition duration-750 group-hover:scale-[1.03]"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/55 via-ink-900/0 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
         <div className="absolute left-4 top-4">
           <span
             className={cn(
-              "inline-flex items-center rounded-full px-3 py-1 text-xs font-bold ring-1",
+              "inline-flex items-center rounded-[2px] px-2.5 py-0.5 text-[10px] font-bold tracking-wider uppercase ring-1",
               statusClass(project.status)
             )}
           >
@@ -38,13 +38,13 @@ export default function ProjectCard({ project }) {
         <div className="absolute bottom-4 left-4 right-4">
           <div className="flex items-end justify-between gap-3">
             <div>
-              <div className="text-sm font-extrabold text-white">{project.title}</div>
-              <div className="mt-1 text-xs text-white/85">
+              <div className="text-sm font-bold text-white tracking-tight">{project.title}</div>
+              <div className="mt-1 text-xs text-white/85 font-light">
                 {project.location} • {project.size}
               </div>
             </div>
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-white ring-1 ring-white/15 backdrop-blur transition group-hover:bg-white/15">
-              <RiArrowRightUpLine className="text-xl" />
+            <div className="inline-flex h-9 w-9 items-center justify-center rounded-[4px] bg-white/10 text-white border border-white/15 transition group-hover:bg-white/20">
+              <RiArrowRightUpLine className="text-lg" />
             </div>
           </div>
         </div>

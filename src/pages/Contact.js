@@ -50,12 +50,12 @@ export default function Contact() {
 
               <div className="mt-8 space-y-4">
                 <Reveal>
-                  <div className="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-ink-900/5">
+                  <div className="rounded-[6px] bg-white p-6 border border-ink-200 shadow-sm">
                     <div className="flex items-start gap-3">
                       <RiMapPin2Line className="mt-0.5 text-xl text-brand" />
                       <div>
-                        <div className="text-sm font-extrabold text-ink-900">Alamat</div>
-                        <div className="mt-2 text-sm text-ink-700">
+                        <div className="text-sm font-bold text-ink-900">Alamat</div>
+                        <div className="mt-2 text-sm text-ink-700 font-light">
                           <div className="font-semibold text-ink-900">{company.address.line1}</div>
                           <div>{company.address.line2}</div>
                           <div>{company.address.line3}</div>
@@ -66,11 +66,11 @@ export default function Contact() {
                 </Reveal>
 
                 <Reveal delay={0.05}>
-                  <div className="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-ink-900/5">
+                  <div className="rounded-[6px] bg-white p-6 border border-ink-200 shadow-sm">
                     <div className="flex items-start gap-3">
                       <RiPhoneLine className="mt-0.5 text-xl text-brand" />
                       <div>
-                        <div className="text-sm font-extrabold text-ink-900">Telepon / WhatsApp</div>
+                        <div className="text-sm font-bold text-ink-900">Telepon / WhatsApp</div>
                         <div className="mt-2 space-y-1 text-sm text-ink-700">
                           {company.phones.map((p) => (
                             <a
@@ -88,11 +88,11 @@ export default function Contact() {
                 </Reveal>
 
                 <Reveal delay={0.1}>
-                  <div className="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-ink-900/5">
+                  <div className="rounded-[6px] bg-white p-6 border border-ink-200 shadow-sm">
                     <div className="flex items-start gap-3">
                       <RiMailLine className="mt-0.5 text-xl text-brand" />
                       <div>
-                        <div className="text-sm font-extrabold text-ink-900">Email</div>
+                        <div className="text-sm font-bold text-ink-900">Email</div>
                         <div className="mt-2 text-sm text-ink-700">
                           <a
                             className="font-semibold text-ink-900 hover:underline"
@@ -107,9 +107,9 @@ export default function Contact() {
                 </Reveal>
 
                 <Reveal delay={0.15}>
-                  <div className="rounded-3xl bg-ink-50 p-6 ring-1 ring-ink-900/5">
-                    <div className="text-sm font-extrabold text-ink-900">Format cepat via WhatsApp</div>
-                    <div className="mt-2 text-sm text-ink-700">
+                  <div className="rounded-[6px] bg-ink-50 p-6 border border-ink-200 shadow-sm">
+                    <div className="text-sm font-bold text-ink-900">Format cepat via WhatsApp</div>
+                    <div className="mt-2 text-sm text-ink-600 font-light">
                       Nama • Lokasi • Jenis bangunan • Perkiraan luas • Target waktu
                     </div>
                     <div className="mt-4">
@@ -129,7 +129,7 @@ export default function Contact() {
                 desc="Form ini akan tersimpan di Netlify Forms (tanpa database). Kami akan menghubungi Anda kembali."
               />
 
-              <div className="mt-8 rounded-3xl bg-white p-8 shadow-soft ring-1 ring-ink-900/5">
+              <div className="mt-8 rounded-[6px] bg-white p-8 border border-ink-200 shadow-sm">
                 <form
                   name="contact"
                   method="POST"
@@ -146,51 +146,51 @@ export default function Contact() {
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="text-xs font-bold text-ink-700">Nama</label>
+                      <label className="text-xs font-semibold text-ink-600">Nama</label>
                       <input
                         name="name"
                         required
-                        className="focus-ring mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-sm"
+                        className="focus-ring mt-2 w-full rounded-[4px] border border-ink-200 bg-white px-4 py-2.5 text-sm placeholder:text-ink-400"
                         placeholder="Nama lengkap"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-bold text-ink-700">No. WhatsApp</label>
+                      <label className="text-xs font-semibold text-ink-600">No. WhatsApp</label>
                       <input
                         name="phone"
                         required
-                        className="focus-ring mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-sm"
+                        className="focus-ring mt-2 w-full rounded-[4px] border border-ink-200 bg-white px-4 py-2.5 text-sm placeholder:text-ink-400"
                         placeholder="08xx-xxxx-xxxx"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-bold text-ink-700">Email</label>
+                      <label className="text-xs font-semibold text-ink-600">Email</label>
                       <input
                         name="email"
                         type="email"
-                        className="focus-ring mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-sm"
+                        className="focus-ring mt-2 w-full rounded-[4px] border border-ink-200 bg-white px-4 py-2.5 text-sm placeholder:text-ink-400"
                         placeholder="email@anda.com"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-bold text-ink-700">Lokasi Proyek</label>
+                      <label className="text-xs font-semibold text-ink-600">Lokasi Proyek</label>
                       <input
                         name="location"
                         required
-                        className="focus-ring mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-sm"
+                        className="focus-ring mt-2 w-full rounded-[4px] border border-ink-200 bg-white px-4 py-2.5 text-sm placeholder:text-ink-400"
                         placeholder="Kota / alamat singkat"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-bold text-ink-700">Jenis Pekerjaan</label>
+                      <label className="text-xs font-semibold text-ink-600">Jenis Pekerjaan</label>
                       <select
                         name="service"
                         required
-                        className="focus-ring mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-sm"
+                        className="focus-ring mt-2 w-full rounded-[4px] border border-ink-200 bg-white px-4 py-2.5 text-sm placeholder:text-ink-400 text-ink-900"
                         defaultValue=""
                       >
                         <option value="" disabled>
@@ -204,42 +204,42 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="text-xs font-bold text-ink-700">Perkiraan Luas / Ukuran</label>
+                      <label className="text-xs font-semibold text-ink-600">Perkiraan Luas / Ukuran</label>
                       <input
                         name="size"
-                        className="focus-ring mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-sm"
+                        className="focus-ring mt-2 w-full rounded-[4px] border border-ink-200 bg-white px-4 py-2.5 text-sm placeholder:text-ink-400"
                         placeholder="contoh: 120 m² / 2 lantai / 18 kamar"
                       />
                     </div>
 
                     <div className="sm:col-span-2">
-                      <label className="text-xs font-bold text-ink-700">Deskripsi Singkat</label>
+                      <label className="text-xs font-semibold text-ink-600">Deskripsi Singkat</label>
                       <textarea
                         name="message"
                         required
                         rows="5"
-                        className="focus-ring mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-sm"
+                        className="focus-ring mt-2 w-full rounded-[4px] border border-ink-200 bg-white px-4 py-2.5 text-sm placeholder:text-ink-400"
                         placeholder="Ceritakan kebutuhan Anda, target waktu, dan referensi (jika ada)."
                       />
                     </div>
                   </div>
 
-                  <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
                     <Button type="submit" variant="brand" size="lg" className="w-full justify-center sm:w-auto">
                       Kirim Form
                     </Button>
-                    <div className="text-xs text-ink-600">
+                    <div className="text-xs text-ink-500 font-light">
                       Dengan mengirim form ini, Anda setuju dihubungi kembali terkait kebutuhan proyek.
                     </div>
                   </div>
                 </form>
               </div>
 
-              <div className="mt-8 overflow-hidden rounded-3xl bg-white shadow-soft ring-1 ring-ink-900/5">
+              <div className="mt-8 overflow-hidden rounded-[6px] border border-ink-200 shadow-sm bg-white p-2">
                 <iframe
                   title="Google Maps"
                   src={company.mapEmbedUrl}
-                  className="h-[340px] w-full border-0"
+                  className="h-[340px] w-full border-0 rounded-[4px]"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />

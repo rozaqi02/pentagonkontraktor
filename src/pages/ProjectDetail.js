@@ -62,7 +62,7 @@ export default function ProjectDetail() {
         <Container className="py-16">
           <Link
             to="/projects"
-            className="focus-ring inline-flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold text-white ring-1 ring-white/15 backdrop-blur hover:bg-white/15"
+            className="focus-ring inline-flex items-center gap-2 rounded-[4px] bg-white/10 px-3 py-2 text-sm font-semibold text-white border border-white/15 hover:bg-white/20"
           >
             <RiArrowLeftLine /> Kembali
           </Link>

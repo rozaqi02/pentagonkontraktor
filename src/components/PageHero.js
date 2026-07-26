@@ -12,7 +12,7 @@ export default function PageHero({ title, desc, image, children, className }) {
         </div>
       ) : null}
 
-      <Container className="py-14 sm:py-16">
+      <Container className="pt-24 pb-14 sm:pt-28 sm:pb-16">
         <div className="max-w-3xl">
           <h1 className="text-balance text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
             {title}

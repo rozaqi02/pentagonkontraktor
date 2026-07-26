@@ -13,7 +13,7 @@ export default function WhatsAppFloat() {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="focus-ring fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-bold text-white shadow-glow"
+      className="focus-ring fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-[4px] bg-brand px-4 py-3 text-sm font-bold text-white border border-brand-600 shadow-md"
       aria-label="Chat WhatsApp"
     >
       <RiWhatsappLine className="text-xl" />

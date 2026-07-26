@@ -49,21 +49,21 @@ export default function Services() {
           <div className="mt-16 grid gap-8 md:grid-cols-2">
             {services.map((s, idx) => (
               <Reveal key={s.id} delay={idx * 0.1}>
-                <div className="group h-full rounded-[2.5rem] bg-white p-10 shadow-lg ring-1 ring-ink-900/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:ring-brand/30">
-                  <div className="flex items-center gap-4 border-b border-ink-900/5 pb-6 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand ring-1 ring-brand/20 transition-colors group-hover:bg-brand group-hover:text-white">
-                      <RiShieldCheckLine className="text-2xl" />
+                <div className="group h-full rounded-[6px] bg-white p-8 border border-ink-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md">
+                  <div className="flex items-center gap-4 border-b border-ink-200 pb-5 mb-5">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[4px] bg-brand/10 text-brand border border-brand/20 transition-colors group-hover:bg-brand group-hover:text-white group-hover:border-transparent">
+                      <RiShieldCheckLine className="text-xl" />
                     </div>
-                    <div className="text-2xl font-extrabold text-ink-900 tracking-tight">{s.title}</div>
+                    <div className="text-xl font-bold text-ink-900 tracking-tight">{s.title}</div>
                   </div>
                   
-                  <p className="text-base leading-relaxed text-ink-600 font-light mb-8">{s.desc}</p>
+                  <p className="text-sm leading-relaxed text-ink-600 font-light mb-8">{s.desc}</p>
 
                   <div>
-                    <div className="text-xs font-bold text-ink-500 uppercase tracking-widest mb-4">Parameter Output Pengerjaan</div>
+                    <div className="text-[10px] font-bold text-ink-400 uppercase tracking-widest mb-4">Parameter Output Pengerjaan</div>
                     <ul className="space-y-3">
                       {s.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-3 text-sm text-ink-700 bg-soft/50 p-3 rounded-xl ring-1 ring-ink-900/5">
+                        <li key={b} className="flex items-start gap-3 text-xs font-semibold text-ink-700 bg-ink-50/50 p-3 rounded-[4px] border border-ink-200/50">
                           <RiStarFill className="mt-0.5 text-brand shrink-0" />
                           <span className="font-medium">{b}</span>
                         </li>
@@ -75,24 +75,23 @@ export default function Services() {
             ))}
           </div>
 
-          <div className="mt-20 relative overflow-hidden rounded-[3rem] bg-ink-900 p-12 text-white shadow-2xl ring-1 ring-white/10 sm:p-16">
-            <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-brand/20 blur-[100px]" />
+          <div className="mt-20 relative overflow-hidden rounded-[8px] bg-black p-8 text-white border border-white/10 shadow-xl sm:p-12">
             <div className="relative z-10 grid gap-10 lg:grid-cols-12 lg:items-center">
               <div className="lg:col-span-8">
-                <div className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">
+                <div className="text-balance text-2xl font-bold tracking-tight sm:text-3xl">
                   Membutuhkan Rencana Anggaran Biaya (RAB) Awal?
                 </div>
-                <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80 font-light">
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70 font-light">
                   Sampaikan informasi mengenai lokasi tapak, peruntukan bangunan, dan estimasi besaran volume pengerjaan. Tim estimator kami akan merumuskan pendekatan terbaik untuk Anda.
                 </p>
               </div>
 
               <div className="lg:col-span-4 lg:flex lg:justify-end">
                 <div className="flex w-full flex-col gap-4">
-                  <Button href={waHref} target="_blank" variant="brand" size="lg" className="w-full justify-center rounded-2xl shadow-lg">
+                  <Button href={waHref} target="_blank" variant="brand" size="lg" className="w-full justify-center shadow-md">
                     Konsultasi Cepat (WhatsApp)
                   </Button>
-                  <Button to="/contact" variant="ghost" size="lg" className="w-full justify-center rounded-2xl ring-1 ring-white/20 hover:bg-white/10">
+                  <Button to="/contact" variant="ghost" size="lg" className="w-full justify-center text-white border-white/10 hover:bg-white/10">
                     Akses Formulir Formal
                   </Button>
                 </div>

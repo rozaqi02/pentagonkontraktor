@@ -4,7 +4,7 @@ This project is a **static company profile website** built with:
 - **React (JavaScript)** using **Create React App** (no Vite, no TypeScript)
 - **Tailwind CSS** for modern UI
 - **React Router** for pages
-- **Framer Motion** for subtle animations
+- **Custom CSS & IntersectionObserver** for smooth scroll-reveal and hover micro-interactions (no Framer Motion dependency)
 - **Netlify Forms** for contact/quote form (no database needed)
 
 ## Local Development

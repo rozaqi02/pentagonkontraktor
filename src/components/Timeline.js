@@ -6,14 +6,14 @@ export default function Timeline({ steps }) {
     <div className="grid gap-4 md:grid-cols-3">
       {steps.map((s, idx) => (
         <Reveal key={s.title} delay={idx * 0.04}>
-          <div className="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-ink-900/5">
+          <div className="rounded-[6px] bg-white p-6 border border-ink-200 shadow-sm">
             <div className="flex items-center gap-3">
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-50 text-sm font-extrabold text-brand-700 ring-1 ring-brand-600/10">
+              <div className="inline-flex h-9 w-9 items-center justify-center rounded-[4px] bg-brand/10 text-sm font-extrabold text-brand border border-brand/20">
                 {String(idx + 1).padStart(2, "0")}
               </div>
-              <div className="text-sm font-extrabold text-ink-900">{s.title}</div>
+              <div className="text-sm font-bold text-ink-900">{s.title}</div>
             </div>
-            <p className="mt-3 text-sm leading-relaxed text-ink-700">{s.desc}</p>
+            <p className="mt-3 text-sm leading-relaxed text-ink-600 font-light">{s.desc}</p>
           </div>
         </Reveal>
       ))}

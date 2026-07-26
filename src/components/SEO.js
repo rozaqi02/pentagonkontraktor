@@ -3,11 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { company } from "../data/siteData";
 
 export default function SEO({ title, description, path = "/" }) {
-  const fullTitle = title ? `${title} — ${company.name}` : company.name;
+  const brandName = "Pentagon Konstruksindo";
+  const fullTitle = brandName;
   const desc = description || company.description;
 
   // Note: set your final domain after deploy (Netlify/custom domain)
-  const baseUrl = "https://YOUR_DOMAIN_HERE";
+  const baseUrl = typeof window !== "undefined" ? window.location.origin : "https://pentagonkonstruksindo.co.id";
   const url = baseUrl + path;
 
   return (

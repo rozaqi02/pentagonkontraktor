@@ -3,7 +3,7 @@ export const company = {
   tagline: "Dari Desain ke Realita, Kami Hadir untuk Anda!",
   brandLine: "Pentagon General Contractor",
   description:
-    "Perusahaan jasa arsitektur dan konstruksi yang memberikan layanan terpadu mulai dari desain, perencanaan teknis, hingga pelaksanaan pembangunan—untuk hunian, usaha, dan perkantoran.",
+    "Perusahaan jasa arsitektur dan konstruksi yang memberikan layanan terpadu mulai dari desain, perencanaan teknis, hingga pelaksanaan pembangunan untuk hunian, usaha, dan perkantoran.",
 
   email: "cvpentagonkonstruksindo@gmail.com",
 
@@ -70,7 +70,7 @@ export const services = [
     id: "construction",
     title: "Konstruksi & Pelaksanaan",
     desc:
-      "Eksekusi pembangunan dengan kontrol mutu, koordinasi lapangan, dan pelaporan progress yang rapi—untuk hasil yang kokoh dan presisi.",
+      "Eksekusi pembangunan dengan kontrol mutu, koordinasi lapangan, dan pelaporan progress yang rapi untuk hasil yang kokoh dan presisi.",
     bullets: [
       "Pekerjaan struktur & arsitektur",
       "Manajemen proyek & pengawasan",
@@ -82,7 +82,7 @@ export const services = [
     id: "renovation",
     title: "Renovasi & Upgrade Bangunan",
     desc:
-      "Renovasi bertahap atau total untuk meningkatkan fungsi, estetika, dan nilai investasi—dengan perencanaan yang minim gangguan.",
+      "Renovasi bertahap atau total untuk meningkatkan fungsi, estetika, dan nilai investasi dengan perencanaan yang minim gangguan.",
     bullets: [
       "Renovasi hunian & komersial",
       "Perbaikan, finishing, dan re-layout",

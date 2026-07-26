@@ -51,8 +51,8 @@ export const projects = [
   },
   {
     slug: "projek-rti-pt-amati-indonesia",
-    title: "Projek RTI — PT Amati Indonesia",
-    location: "—",
+    title: "Projek RTI - PT Amati Indonesia",
+    location: "-",
     size: "1.300 m²",
     category: "commercial",
     status: "On Going",
@@ -61,7 +61,7 @@ export const projects = [
   },
   {
     slug: "border-installation-gudang-malang",
-    title: "Border Installation — Gudang",
+    title: "Border Installation - Gudang",
     location: "Malang",
     size: "1.800 m²",
     category: "commercial",
